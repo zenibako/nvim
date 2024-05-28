@@ -31,6 +31,7 @@ return {
 		"html",
 		"lwc_ls",
 		"visualforce_ls",
+		"gopls"
             },
             handlers = {
                 function(server_name) -- default handler (optional)
