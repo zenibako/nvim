@@ -35,19 +35,19 @@ return {
 	wk.register({
 	  d = {
 	    name = "Deploy to Salesforce",
-	    f = { file_manager.push_to_org, "Deploy This File Only" },
+	    c = { file_manager.push_to_org, "Deploy This File Only" },
 	    p = { "<cmd>!sf project deploy start<cr>", "Deploy Project" },
 	    t = {
 		name = "Deploy and Run Apex Tests",
-		a = { function()
+		p = { function()
 			vim.cmd("!sf project deploy start")
 			vim.cmd("!sf apex run test --synchronous")
 		end, "Deploy Project and Run All Tests" },
-		m = { function()
+		c = { function()
 			vim.cmd("!sf project deploy start")
 			test_runner.execute_current_class()
 		end, "Deploy Project and Run Current Test Class" },
-		c = { function()
+		m = { function()
 			vim.cmd("!sf project deploy start")
 			test_runner.execute_current_method()
 		end, "Deploy Project and Run Current Test Method" },
@@ -55,15 +55,15 @@ return {
 	  },
 	  t = {
 	    name = "Run Salesforce Apex Tests",
-	    a = { "<cmd>!sf apex run test --synchronous<cr>", "Run All Tests" },
-	    m = { test_runner.execute_current_class, "Run Current Test Class" },
-	    c = { test_runner.execute_current_method, "Run Current Test Method" },
+	    p = { "<cmd>!sf apex run test --synchronous<cr>", "Run All Tests" },
+	    c = { test_runner.execute_current_class, "Run Current Test Class" },
+	    m = { test_runner.execute_current_method, "Run Current Test Method" },
 	  },
 	  o = {
 	    name = "Manage Salesforce Orgs",
 	    o = { "<cmd>!sf org open<cr>", "Open Default Org" },
 	    l = { "<cmd>!sf org list<cr>", "List Orgs" },
 	  },
-	}, { prefix = "<leader>s" })
+	}, { prefix = "<leader>sf" })
     end
 }
