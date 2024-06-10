@@ -4,11 +4,13 @@ return {
     tag = "0.1.5",
 
     dependencies = {
-        "nvim-lua/plenary.nvim"
+        "nvim-lua/plenary.nvim",
+	"lrfurtado/telescope-gitlab.nvim",
     },
 
     config = function()
         require('telescope').setup({})
+	require("telescope").load_extension("gitlab")
 
         local builtin = require('telescope.builtin')
         vim.keymap.set('n', '<leader>pf', builtin.find_files, {})

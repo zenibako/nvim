@@ -56,3 +56,4 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
+vim.keymap.set("n", "<leader>glmr", "<cmd>glab mr create --web --no-editor --fill<CR>")
