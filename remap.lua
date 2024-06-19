@@ -57,3 +57,4 @@ vim.keymap.set("n", "<leader><leader>", function()
 end)
 
 vim.keymap.set("n", "<leader>glmr", "<cmd>glab mr create --web --no-editor --fill<CR>")
+vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename)
