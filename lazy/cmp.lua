@@ -1,5 +1,6 @@
 return {
   "hrsh7th/nvim-cmp",
+  dependencies = { "brenoprata10/nvim-highlight-colors" },
   config = function()
     -- Set up nvim-cmp.
     local cmp = require 'cmp'
@@ -24,7 +25,7 @@ return {
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.abort(),
-        ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+        ['<CR>'] = cmp.mapping.confirm({ select = false }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
       }),
       sources = cmp.config.sources({
         { name = 'nvim_lsp' },
@@ -34,7 +35,10 @@ return {
         -- { name = 'snippy' }, -- For snippy users.
       }, {
         { name = 'buffer' },
-      })
+      }),
+      formatting = {
+        format = require("nvim-highlight-colors").format
+      }
     })
 
     -- To use git you need to install the plugin petertriho/cmp-git and uncomment lines below
@@ -47,7 +51,7 @@ return {
     })
  })
  require("cmp_git").setup() ]]
-                               --
+    --
 
     -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
     cmp.setup.cmdline({ '/', '?' }, {
