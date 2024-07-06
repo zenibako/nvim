@@ -10,6 +10,7 @@ vim.cmd("let g:fugitive_gitlab_domains = ['https://gitlab.odaseva.net']")
 vim.cmd("set tabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set expandtab")
+vim.cmd("set termguicolors")
 
 require("zenibako.remap")
 require("zenibako.lazy_init")
