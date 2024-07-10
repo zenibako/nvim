@@ -29,6 +29,6 @@ return {
     end)
     vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
     vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
-    vim.keymap.set('n', '<leader>lr>', builtin.lsp_references, { noremap = true, silent = true })
+    vim.keymap.set('n', '<leader>lr', builtin.lsp_references, { noremap = true, silent = true })
   end
 }
