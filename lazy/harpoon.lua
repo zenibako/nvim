@@ -1,21 +1,27 @@
 return {
   "ThePrimeagen/harpoon",
   branch = "harpoon2",
-  dependencies = { "nvim-lua/plenary.nvim" },
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "folke/which-key.nvim",
+  },
   config = function()
     local harpoon = require("harpoon")
     harpoon:setup()
 
-    vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
-    vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+    local wk = require("which-key")
+    wk.add({
+      { "<leader>a", function() harpoon:list():add() end,                         desc = "Harpoon: Add file" },
+      { "<C-e>",     function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, desc = "Harpoon: Quick menu" },
 
-    vim.keymap.set("n", "<C-h>", function() harpoon:list():select(1) end)
-    vim.keymap.set("n", "<C-t>", function() harpoon:list():select(2) end)
-    vim.keymap.set("n", "<C-n>", function() harpoon:list():select(3) end)
-    vim.keymap.set("n", "<C-s>", function() harpoon:list():select(4) end)
+      { "<C-h>",     function() harpoon:list():select(1) end,                     desc = "Harpoon: Jump to 1" },
+      { "<C-t>",     function() harpoon:list():select(2) end,                     desc = "Harpoon: Jump to 2" },
+      { "<C-n>",     function() harpoon:list():select(3) end,                     desc = "Harpoon: Jump to 3" },
+      { "<C-s>",     function() harpoon:list():select(4) end,                     desc = "Harpoon: Jump to 4" },
 
-    -- Toggle previous & next buffers stored within Harpoon list
-    vim.keymap.set("n", "<C-S-P>", function() harpoon:list():prev() end)
-    vim.keymap.set("n", "<C-S-N>", function() harpoon:list():next() end)
+      -- Toggle previous & next buffers stored within Harpoon list
+      { "<C-S-P>",   function() harpoon:list():prev() end,                        desc = "Harpoon: Jump to Previous" },
+      { "<C-S-N>",   function() harpoon:list():next() end,                        desc = "Harpoon: Jump to Next" },
+    })
   end
 }
