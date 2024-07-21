@@ -6,6 +6,10 @@ return {
 		"folke/which-key.nvim",
 	},
 	config = function()
+		vim.filetype.add({
+			extension = { cls = "apex", trigger = "apex", page = "html", apex = "apex" },
+		})
+
 		require("salesforce").setup({
 			debug = {
 				to_file = true,
@@ -33,10 +37,10 @@ return {
 		local test_runner = require("salesforce.test_runner")
 		local file_manager = require("salesforce.file_manager")
 		local get_deploy_cmd = function(file_path)
-      local deploy_cmd = "!sf project deploy start"
-      if file_path == nil then
-        return deploy_cmd
-      end
+			local deploy_cmd = "!sf project deploy start"
+			if file_path == nil then
+				return deploy_cmd
+			end
 
 			local class_name = file_path:match(".*/(.-)%.cls")
 			if class_name == nil then
