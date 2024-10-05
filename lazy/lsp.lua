@@ -35,7 +35,7 @@ return {
         "lwc_ls",
         "visualforce_ls",
         "gopls",
-        "tsserver",
+        "ts_ls",
         "terraformls",
       },
       handlers = {
