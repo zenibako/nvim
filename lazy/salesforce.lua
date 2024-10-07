@@ -94,3 +94,43 @@ return {
 		}, { prefix = "<leader>sf" })
 	end,
 }
+  --[[
+    wk.register({
+      { "<leader>sfd",  group = "Deploy to Salesforce" },
+      { "<leader>sfdc", file_manager.push_to_org,            desc = "Deploy This File Only" },
+      { "<leader>sfdp", "<cmd>!sf project deploy start<cr>", desc = "Deploy Project" },
+      { "<leader>sfdt", group = "Deploy and Run Apex Tests" },
+      {
+        "<leader>sfdtc",
+        function()
+          vim.cmd(get_deploy_cmd(vim.api.nvim_buf_get_name(0)))
+          test_runner.execute_current_class()
+        end,
+        desc = "Deploy and Run Current Test Class",
+      },
+      {
+        "<leader>sfdtm",
+        function()
+          vim.cmd(get_deploy_cmd(vim.api.nvim_buf_get_name(0)))
+          test_runner.execute_current_method()
+        end,
+        desc = "Deploy and Run Current Test Method",
+      },
+      {
+        "<leader>sfdtp",
+        function()
+          vim.cmd("!sf project deploy start")
+          vim.cmd("!sf apex run test --synchronous")
+        end,
+        desc = "Deploy Project and Run All Tests",
+      },
+      { "<leader>sfo",  group = "Manage Salesforce Orgs" },
+      { "<leader>sfol", "<cmd>!sf org list<cr>",                    desc = "List Orgs" },
+      { "<leader>sfoo", "<cmd>!sf org open<cr>",                    desc = "Open Default Org" },
+      { "<leader>sft",  group = "Run Salesforce Apex Tests" },
+      { "<leader>sftc", test_runner.execute_current_class,          desc = "Run Current Test Class" },
+      { "<leader>sftm", test_runner.execute_current_method,         desc = "Run Current Test Method" },
+      { "<leader>sftp", "<cmd>!sf apex run test --synchronous<cr>", desc = "Run All Tests" },
+    })
+}
+]]
