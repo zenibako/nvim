@@ -44,7 +44,15 @@ return {
             capabilities = capabilities,
           })
         end,
-
+        ["ts_ls"] = function()
+          require("lspconfig").ts_ls.setup {
+            settings = {
+              implicitProjectConfiguration = {
+                checkJs = true
+              },
+            }
+          }
+        end,
         ["lua_ls"] = function()
           local lspconfig = require("lspconfig")
           lspconfig.lua_ls.setup({
@@ -64,7 +72,7 @@ return {
           lspconfig.apex_ls.setup({
             filetypes = { "java", "trigger", "apex" },
             apex_jar_path = vim.fn.expand("$HOME/lib/apex-jorje-lsp.jar"),
-            apex_enable_semantic_errors = true,  -- Whether to allow Apex Language Server to surface semantic errors
+            apex_enable_semantic_errors = true,        -- Whether to allow Apex Language Server to surface semantic errors
             apex_enable_completion_statistics = false, -- Whether to allow Apex Language Server to collect telemetry on code completion usage
           })
         end,
@@ -106,7 +114,7 @@ return {
         "java",
       },
     })
-    ]]--
+    ]] --
 
     cmp.setup({
       snippet = {
