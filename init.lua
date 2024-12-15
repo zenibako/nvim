@@ -13,3 +13,13 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 require("zenibako.formatting")
 require("zenibako.lazy_init")
+require("zenibako.salesforce")
+
+vim.api.nvim_create_autocmd('TermOpen', {
+  group = vim.api.nvim_create_augroup('custom-term-open', { clear = true }),
+  callback = function()
+    vim.opt.number = false
+    vim.opt.relativenumber = false
+  end,
+})
+
