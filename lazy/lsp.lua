@@ -47,6 +47,9 @@ return {
 						capabilities = capabilities,
 					})
 				end,
+				["lwc_ls"] = function()
+					require("lspconfig").lwc_ls.setup({})
+				end,
 				["ts_ls"] = function()
 					require("lspconfig").ts_ls.setup({
 						settings = {
