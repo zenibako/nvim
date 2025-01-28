@@ -13,6 +13,7 @@ vim.keymap.set("n", "<leader>fr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left>
 vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename)
 vim.keymap.set("n", "<leader>pv", vim.cmd[file_mgr_cmd])
 
+require("zenibako.rocks")
 require("zenibako.formatting")
 require("zenibako.lazy_init")
 require("zenibako.salesforce")
