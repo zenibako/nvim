@@ -55,6 +55,6 @@ return {
 			}),
 		}
 
-		null_ls.register(sf_code_analyzer)
+		-- null_ls.register(sf_code_analyzer)
 	end,
 }
