@@ -98,6 +98,18 @@ return {
 						},
 					})
 				end,
+				["visualforce_ls"] = function()
+					require("lspconfig").visualforce_ls.setup({
+            filetypes = { "visualforce", "page", "component" },
+						settings = {
+							cmd = {
+								"node",
+								vim.fn.expand("$HOME/Projects/salesforcedx-vscode/node_modules/@salesforce/salesforcedx-visualforce-language-server/out/src/visualforceServer.js"),
+								"--stdio",
+							},
+						},
+					})
+				end,
 				["yamlls"] = function()
 					require("lspconfig").yamlls.setup({
 						settings = {
