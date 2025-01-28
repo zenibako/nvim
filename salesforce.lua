@@ -5,7 +5,7 @@ vim.filetype.add({
 
 -- Manage a Salesforce CLI terminal
 local job_id = 0
-vim.keymap.set("n", "<leader>sft", function()
+vim.keymap.set("n", "<leader>sfterm", function()
 	vim.cmd.vnew()
 	vim.cmd.term()
 	vim.cmd.wincmd("J")
@@ -45,8 +45,7 @@ wk.register({
 			name = "Deploy and Run Apex Tests",
 			p = {
 				function()
-					vim.cmd("!sf project deploy start")
-					vim.cmd("!sf apex run test --synchronous")
+					vim.cmd("!sf project deploy start --concise --test-level RunLocalTests")
 				end,
 				"Deploy Project and Run All Tests",
 			},
