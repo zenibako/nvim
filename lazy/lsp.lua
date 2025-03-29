@@ -103,8 +103,7 @@ return {
             filetypes = { "visualforce", "page", "component" },
 						settings = {
 							cmd = {
-								"node",
-								vim.fn.expand("$HOME/Projects/salesforcedx-vscode/node_modules/@salesforce/salesforcedx-visualforce-language-server/out/src/visualforceServer.js"),
+								vim.fn.expand("$HOME/.local/share/nvim/mason/packages/visualforce-language-server/visualforce-language-server"),
 								"--stdio",
 							},
 						},
