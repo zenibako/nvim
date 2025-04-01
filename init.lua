@@ -1,9 +1,9 @@
 vim.g.mapleader = " "
 
-require("rocks")
-require("formatting")
+require("config.formatting")
 require("config.lazy")
-require("salesforce")
+require("config.rocks")
+require("config.salesforce")
 
 vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
@@ -30,7 +30,7 @@ vim.api.nvim_create_autocmd("TermOpen", {
 vim.lsp.enable({
 	"apex_ls",
 	-- "gitlab_ci_ls",
-	-- "gopls",
+	"gopls",
 	-- "html",
 	-- "jsonls",
 	"lua_ls",
