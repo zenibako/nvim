@@ -21,7 +21,7 @@
   "hardtime.nvim": { "branch": "main", "commit": "f87c86d1aa1e05dcf3c6ecd97fbfd237e2de0bf5" },
   "harpoon": { "branch": "harpoon2", "commit": "ed1f853847ffd04b2b61c314865665e1dadf22c7" },
   "jester": { "branch": "main", "commit": "6679cdc24e4bdb2d61d0e71e3c65011029f166ef" },
-  "jira.nvim": { "branch": "master", "commit": "a61695d4981caf4b4410b40ff24de35262d7e0a5" },
+  "jira.nvim": { "branch": "master", "commit": "f00e893a720bead6615c1fa9ab65d26968d59ee1" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "lua-utils.nvim": { "branch": "main", "commit": "e565749421f4bbb5d2e85e37c3cef9d56553d8bd" },
   "lualine.nvim": { "branch": "master", "commit": "1517caa8fff05e4b4999857319d3b0609a7f57fa" },
