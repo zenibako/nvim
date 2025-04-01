@@ -28,6 +28,5 @@ return {
 			-- Default SF CLI executable (should not need to be changed)
 			sf_executable = "sf",
 		})
-
 	end,
 }

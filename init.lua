@@ -1,9 +1,9 @@
 vim.g.mapleader = " "
 
-require("zenibako.rocks")
-require("zenibako.formatting")
-require("zenibako.lazy_init")
-require("zenibako.salesforce")
+require("rocks")
+require("formatting")
+require("lazy_init")
+require("salesforce")
 
 vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")

@@ -1,3 +1,4 @@
+---@type vim.lsp.Config
 return {
 	filetypes = { "java", "trigger", "apex" },
 	apex_jar_path = vim.fn.expand("$HOME/lib/apex-jorje-lsp.jar"),

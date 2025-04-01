@@ -11,7 +11,6 @@ return {
 	},
 	config = function()
 		-- Set up nvim-cmp.
-		local cmp = require("cmp")
 		local cmp_lsp = require("cmp_nvim_lsp")
 		local capabilities = vim.tbl_deep_extend(
 			"force",
@@ -23,6 +22,7 @@ return {
 			capabilities,
 		})
 
+		local cmp = require("cmp")
 		local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
 		--[[

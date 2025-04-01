@@ -1,3 +1,4 @@
+---@type vim.lsp.Config
 return {
 	filetypes = { "visualforce", "page", "component" },
 	settings = {

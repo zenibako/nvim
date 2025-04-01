@@ -5,4 +5,5 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 	end,
 })
 
+---@type vim.lsp.Config
 return {}
