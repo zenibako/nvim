@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 
 require("config.formatting")
 require("config.lazy")
-require("config.rocks")
+-- require("config.rocks")
 require("config.salesforce")
 
 vim.opt.hlsearch = true
