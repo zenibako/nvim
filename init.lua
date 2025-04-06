@@ -19,23 +19,23 @@ vim.api.nvim_create_autocmd("TermOpen", {
 	end,
 })
 
-local lsp_names = {
+local ensured_lsp_names = {
 	"apex_ls",
-	"gitlab_ci_ls",
 	"gopls",
 	"html",
 	"jsonls",
-	"lua_ls",
 	"lwc_ls",
 	"terraformls",
 	-- "ts_ls",
 	"visualforce_ls",
 	"yamlls",
 }
-
 require("mason").setup()
-require("mason-lspconfig").setup({
-  ensure_installed = lsp_names,
-})
+require("mason-lspconfig").setup({ ensure_installed = ensured_lsp_names })
 
-vim.lsp.enable(lsp_names)
+local all_lsp_names = {
+	"gitlab_ci_ls",
+	"lua_ls",
+  unpack(ensured_lsp_names)
+}
+vim.lsp.enable(all_lsp_names)
