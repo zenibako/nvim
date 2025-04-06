@@ -27,7 +27,7 @@ vim.api.nvim_create_autocmd("TermOpen", {
 	end,
 })
 
-vim.lsp.enable({
+local lsp_names = {
 	"apex_ls",
 	"gitlab_ci_ls",
 	"gopls",
@@ -39,4 +39,11 @@ vim.lsp.enable({
 	-- "ts_ls",
 	"visualforce_ls",
 	"yamlls",
+}
+
+require("mason").setup()
+require("mason-lspconfig").setup({
+  ensure_installed = lsp_names,
 })
+
+vim.lsp.enable(lsp_names)
