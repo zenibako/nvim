@@ -20,6 +20,7 @@ vim.api.nvim_create_autocmd("TermOpen", {
 })
 
 local ensured_lsp_names = {
+  "astro",
 	"apex_ls",
 	"gopls",
 	"html",
