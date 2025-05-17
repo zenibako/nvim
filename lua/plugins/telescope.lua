@@ -25,6 +25,6 @@ return {
     end)
     vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
     vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
-    vim.keymap.set('n', '<leader>tp', builtin.pickers, {})
+    vim.keymap.set('n', '<leader>pp', builtin.pickers, {})
   end
 }
