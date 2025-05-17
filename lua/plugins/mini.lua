@@ -3,7 +3,11 @@ return {
 	version = false,
 	config = function()
 		require("mini.ai").setup()
-		require("mini.files").setup()
+		require("mini.files").setup({
+      mappings = {
+        go_in_plus = "<CR>"
+      }
+    })
 		require("mini.move").setup()
 		require("mini.operators").setup()
 		require("mini.pairs").setup()
