@@ -1,13 +1,9 @@
 return {
   "nvim-telescope/telescope.nvim",
-
-  tag = "0.1.5",
-
   dependencies = {
     "nvim-lua/plenary.nvim",
     "lrfurtado/telescope-gitlab.nvim",
   },
-
   config = function()
     require('telescope').setup({})
     require("telescope").load_extension("gitlab")
@@ -29,6 +25,6 @@ return {
     end)
     vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
     vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
-    vim.keymap.set('n', 'gr', builtin.lsp_references)
+    vim.keymap.set('n', '<leader>tp', builtin.pickers, {})
   end
 }
