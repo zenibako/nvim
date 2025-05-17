@@ -17,6 +17,7 @@
   "gitgraph.nvim": { "branch": "main", "commit": "01e466b32c346a165135dd47d42f1244eca06572" },
   "gitlab.nvim": { "branch": "main", "commit": "a260f648fe92c5d640340e1c2d55db1fe523c8a5" },
   "go.nvim": { "branch": "master", "commit": "844b66b397edcbac8f941129eb4a57472a582a52" },
+  "golf": { "branch": "main", "commit": "abf1bc0c1c4a5482b4a4b36b950b49aaa0f39e69" },
   "guihua.lua": { "branch": "master", "commit": "0cc9631914ffcbe3e474e809c610d12a75b660cf" },
   "hardtime.nvim": { "branch": "main", "commit": "3d1e224cd6817518e1c7f1acba1fcda96ba8eb1f" },
   "harpoon": { "branch": "harpoon2", "commit": "ed1f853847ffd04b2b61c314865665e1dadf22c7" },
