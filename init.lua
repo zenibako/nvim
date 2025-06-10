@@ -32,5 +32,4 @@ vim.lsp.enable({
 })
 
 vim.cmd("set number relativenumber")
-vim.cmd("set mouse=")
 
