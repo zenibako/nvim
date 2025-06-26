@@ -1,12 +1,16 @@
 return {
-  'xixiaofinland/sf.nvim',
+  "xixiaofinland/sf.nvim",
 
   dependencies = {
-    'nvim-treesitter/nvim-treesitter',
-    'ibhagwan/fzf-lua', -- no need if you don't use listing metadata feature
+    "nvim-treesitter/nvim-treesitter",
+    "ibhagwan/fzf-lua", -- no need if you don't use listing metadata feature
+    "stevearc/overseer.nvim",
   },
 
   config = function()
-    require('sf').setup({ enable_hotkeys = true })  -- Important to call setup() to initialize the plugin!
-  end
+    require("sf").setup({
+      enable_hotkeys = true,
+      terminal = "overseer",
+    })
+  end,
 }
