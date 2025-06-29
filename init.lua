@@ -32,4 +32,3 @@ vim.lsp.enable({
 })
 
 vim.cmd("set number relativenumber")
-
