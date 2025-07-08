@@ -18,9 +18,8 @@ vim.api.nvim_create_autocmd("TermOpen", {
 
 vim.lsp.enable({
 	"apex-language-server",
-  "astro",
 	"gitlab_ci_ls",
-	"gopls",
+	-- "gopls",
 	"html",
 	"jsonls",
 	"lua_ls",
