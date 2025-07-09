@@ -7,8 +7,9 @@ return {
 			suggestion = { enabled = false },
 			panel = { enabled = false },
 			filetypes = {
-				markdown = true,
-				help = true,
+				jjdescription = false,
+				markdown = false,
+				help = false,
 			},
 		},
 	},
