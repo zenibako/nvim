@@ -15,7 +15,7 @@ return {
           default_workspace = "notes",
         },
       },
-      ["core.integrations.telescope"] = {},
+      -- ["core.integrations.telescope"] = {},
     },
   },
   dependencies = {
@@ -25,7 +25,7 @@ return {
       "pysan3/pathlib.nvim",
       "nvim-neotest/nvim-nio",
       "MunifTanjim/nui.nvim",
-      "nvim-neorg/neorg-telescope",
+      -- "nvim-neorg/neorg-telescope",
     },
     {
       -- YOU ALMOST CERTAINLY WANT A MORE ROBUST nvim-treesitter SETUP
