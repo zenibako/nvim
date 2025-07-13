@@ -7,7 +7,7 @@ vim.keymap.set("n", "<leader>fr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left>
 local builtin = require("fzf-lua")
 vim.keymap.set("n", "<leader>pf", builtin.files, {})
 vim.keymap.set("n", "<leader>lg", builtin.live_grep, {})
-vim.keymap.set("n", "<C-p>", builtin.git_files, {})
+vim.keymap.set('n', '<C-p>', "<cmd>lua require('fzf-lua').git_files()<CR>", {})
 vim.keymap.set("n", "<leader>pws", builtin.grep_cword, {})
 vim.keymap.set("n", "<leader>pWs", builtin.grep_cWORD, {})
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
